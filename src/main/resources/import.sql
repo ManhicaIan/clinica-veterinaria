@@ -1,5 +1,5 @@
-INSERT INTO user_tb (id, email, password, status) VALUES (random_uuid(), 'admin@clinica.com', 'admin123', true);
-INSERT INTO user_tb (id, email, password, status) VALUES (random_uuid(), 'joao.silva@clinica.com', 'joao123', true);
-INSERT INTO user_tb (id, email, password, status) VALUES (random_uuid(), 'maria.costa@clinica.com', 'maria123', true);
-INSERT INTO user_tb (id, email, password, status) VALUES (random_uuid(), 'pedro.nunes@clinica.com', 'pedro123', false);
-INSERT INTO user_tb (id, email, password, status) VALUES (random_uuid(), 'ana.lima@clinica.com', 'ana123', true);
+INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Admin', 'admin@clinica.com', 'admin123', true, 'ADMIN', NOW());
+INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'João Silva', 'joao.silva@clinica.com', 'joao123', true, 'USER', NOW());
+INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Maria Costa', 'maria.costa@clinica.com', 'maria123', true, 'USER', NOW());
+INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Pedro Nunes', 'pedro.nunes@clinica.com', 'pedro123', false, 'USER', NOW());
+INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Ana Lima', 'ana.lima@clinica.com', 'ana123', true, 'USER', NOW());
