@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-public class CustomValdationErrorMessage extends CustomErrorMessage {
+public class CustomValidationError extends CustomErrorMessage {
     private List<FieldMessage> errors = new ArrayList<>();
 
-    public CustomValdationErrorMessage(Instant timestamp, int status, String error, String path) {
+    public CustomValidationError(Instant timestamp, int status, String error, String path) {
         super(timestamp, status, error, path);
     }
 

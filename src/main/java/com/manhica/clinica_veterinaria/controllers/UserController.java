@@ -1,7 +1,6 @@
-package com.manhica.clinica_veterinaria.controllers.handlers;
+package com.manhica.clinica_veterinaria.controllers;
 
 import com.manhica.clinica_veterinaria.dto.response.UserResponse;
-import com.manhica.clinica_veterinaria.entity.user.User;
 import com.manhica.clinica_veterinaria.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
