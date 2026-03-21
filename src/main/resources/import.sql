@@ -1,5 +1,1 @@
 INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Admin', 'admin@clinica.com', '$2b$12$hBBn2.aCOu4gWgZWbBTKMOh2w0pS4oLCUqkltkeokmHSeL7rjO1RG', true, 'ADMIN', NOW());
-INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'João Silva', 'joao.silva@clinica.com', '$2b$12$orjBRl2tR1hTdaXweCzLlevZOQFQ3qLKTPsYxDqM19Yb38t64WZKe', true, 'USER', NOW());
-INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Maria Costa', 'maria.costa@clinica.com', '$2b$12$UGrHItmeXtapfj.eLjB9DOs.gI7qYJywPDupU0wOjCDEsmFvMgw6W', true, 'USER', NOW());
-INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Pedro Nunes', 'pedro.nunes@clinica.com', '$2b$12$fsoIkkVcLDqqaGW7UxzT2unp9CH8PAbOdk.O8nMpO1NoZ0QyDk5VC', false, 'USER', NOW());
-INSERT INTO user_tb (id, name, email, password, status, role, created_at) VALUES (random_uuid(), 'Ana Lima', 'ana.lima@clinica.com', '$2b$12$nafg87Caz3qTshzPkuAYNuS2rq9SYBF/0kARtSbCjZWr6vhUQ0XGS', true, 'USER', NOW());
