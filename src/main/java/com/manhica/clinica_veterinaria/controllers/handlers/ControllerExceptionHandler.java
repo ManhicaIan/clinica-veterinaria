@@ -2,8 +2,10 @@ package com.manhica.clinica_veterinaria.controllers.handlers;
 
 
 
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.manhica.clinica_veterinaria.dto.errors.CustomErrorMessage;
 import com.manhica.clinica_veterinaria.dto.errors.validation.CustomValidationError;
+import com.manhica.clinica_veterinaria.services.exceptions.UserAlreadyExistsException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,5 +29,19 @@ public class ControllerExceptionHandler {
         }
         return ResponseEntity.status(status).body(err);
     }
+
+    @ExceptionHandler(UserAlreadyExistsException.class)
+    public ResponseEntity<CustomErrorMessage> userAlreadyExists(UserAlreadyExistsException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.CONFLICT;
+        CustomErrorMessage err = new CustomValidationError(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
+    }
+    @ExceptionHandler(TokenExpiredException.class)
+    public ResponseEntity<CustomErrorMessage> tokenExpired(TokenExpiredException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.UNAUTHORIZED;
+        CustomErrorMessage err = new CustomValidationError(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
+    }
+
 
 }
